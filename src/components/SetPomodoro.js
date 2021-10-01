@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { SettingContext } from "../context/SettingsContext";
 import Button from "./Button";
 
 const SetPomodoro = () => {
+  const { updateExecute } = useContext(SettingContext);
   const [newTimer, setNewTimer] = useState({
     work: 0.3,
     short: 0.2,
